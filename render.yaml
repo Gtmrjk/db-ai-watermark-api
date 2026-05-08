@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: db-ai-watermark-api
+    runtime: docker
+    plan: starter
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: TOOL_URL
+        sync: false
